@@ -18,6 +18,7 @@ public class Ejercicio3 {
 		norepeat.removeAll(repeat);
 		System.out.println("Palabras  NO repetidas: " + norepeat);
 		System.out.println("Palabras  repetidas: " + repeat);
+		teclado.close();
 	}
 
 }
