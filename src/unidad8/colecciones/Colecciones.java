@@ -1,6 +1,10 @@
 package unidad8.colecciones;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 
@@ -48,6 +52,25 @@ public class Colecciones {
 				return true;
 		}
 		return false;
+	}
+
+	static boolean valoresUnicos(Map<String, String> mapa) {
+
+		List<String> lista = new ArrayList<>();
+		Set<String> set = new HashSet<>();
+		for (String s : lista)
+			if (!set.add(s))
+				return false;
+		return true;
+
+//		Otra forma:
+//		List<String> lista = new ArrayList<>();
+//		Set<String> set = new HashSet<>(lista);
+//		return lista.size()==set.size();
+
+//		Otra forma:
+//		return mapa.values().stream().distinct().count()==mapa.values().size();
+
 	}
 
 }
