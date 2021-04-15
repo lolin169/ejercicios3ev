@@ -72,5 +72,7 @@ public class Colecciones {
 //		return mapa.values().stream().distinct().count()==mapa.values().size();
 
 	}
+	
+	
 
 }
