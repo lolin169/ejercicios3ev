@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.function.Predicate;
 
 public class Colecciones {
@@ -73,6 +74,15 @@ public class Colecciones {
 
 	}
 	
-	
+	static boolean algunaSeRepiteAlMenos3Veces(List<String> lista){
+		
+		Map<String,Integer> mapa= new TreeMap<>();
+		for(String palabra:lista)
+			if(mapa.containsKey(palabra))
+				mapa.put(palabra, mapa.get(palabra)+1);
+			else
+				mapa.put(palabra,1);
+		return mapa.values().stream().anyMatch(n -> n >= 3);
+	}
 
 }
