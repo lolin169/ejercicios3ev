@@ -55,14 +55,8 @@ public class Ejercicio4 {
 	}
 
 	static void borrar(Scanner cmd) {
-		if (!cmd.hasNext())
-			texto.getMapa().clear();
-		while (cmd.hasNext()) {
-			String siguiente = cmd.next();
-			if (texto.comprueba(siguiente))
-				texto.getMapa().get(siguiente.length()).remove(siguiente);
-			else
-				System.out.println("Palabra no existente en la colección");
-		}
+		texto.getMapa().clear();
+		if (cmd.hasNext())
+			texto.añadePalabras(cmd.nextLine().trim());
 	}
 }
