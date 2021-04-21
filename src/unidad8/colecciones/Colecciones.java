@@ -110,4 +110,23 @@ public class Colecciones {
 
 	}
 
+	static int moda(ArrayList<Integer> lista) {
+		Map<Integer, Integer> mapa = new HashMap<>();
+		lista.stream().distinct().forEach(n -> mapa.put(n, 0));
+		for (int n : lista)
+			mapa.put(n, mapa.get(n) + 1);
+//		mapa.entrySet().forEach(n -> {if (n.getValue() == mapa.values().stream().max(Integer::compare).get()) {System.out.println(n.getKey());}});
+//		for(Entry<Integer,Integer> e:mapa.entrySet())
+//			if(e.getValue()==mapa.values().stream().max(Integer::compare).get())
+//				return (int)e.getKey();
+		int max = 0;
+		for (int i : mapa.values())
+			if (i > max)
+				max = i;
+		for (Entry<Integer, Integer> e : mapa.entrySet())
+			if (e.getValue() == max)
+				return e.getKey();
+		return 0;
+	}
+
 }
