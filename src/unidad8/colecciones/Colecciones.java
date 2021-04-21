@@ -129,4 +129,17 @@ public class Colecciones {
 		return 0;
 	}
 
+	public static void eliminarSiMayoresEncima(Deque<Integer> pila) {
+		Deque<Integer> pila2 = new ArrayDeque<>();
+		while (!pila.isEmpty()) {
+			if (pila2.isEmpty())
+				pila2.push(pila.pop());
+			int n = pila.pop();
+			if (n >= pila2.peek())
+				pila2.push(n);
+		}
+		while (!pila2.isEmpty())
+			pila.push(pila2.poll());
+	}
+
 }
