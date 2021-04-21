@@ -14,6 +14,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class Colecciones {
 
@@ -151,6 +152,20 @@ public class Colecciones {
 			if (mapa2.entrySet().contains(n))
 				mapa.put(n.getKey(), n.getValue());
 		return mapa;
+	}
+
+	public static int ValorMenosRepetido(Map<String, Integer> mapa) {
+		Map<Integer, Integer> mapa1 = new TreeMap<>();
+		for (Entry<String, Integer> n : mapa.entrySet()) {
+			if (mapa1.get(n.getValue()) != null)
+				mapa1.put(n.getValue(), mapa1.get(n.getValue()) + 1);
+			else
+				mapa1.put(n.getValue(), 1);
+		}
+		for (Entry<Integer, Integer> n : mapa1.entrySet())
+			if (n.getValue() == 1)
+				return n.getKey();
+		return 0;
 	}
 
 }
