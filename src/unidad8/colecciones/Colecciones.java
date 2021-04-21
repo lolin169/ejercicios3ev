@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -140,6 +141,16 @@ public class Colecciones {
 		}
 		while (!pila2.isEmpty())
 			pila.push(pila2.poll());
+	}
+
+	public static Map<String, Integer> interseccion(Map<String, Integer> mapa1, Map<String, Integer> mapa2) {
+		Map<String, Integer> mapa = new LinkedHashMap<>();
+//		mapa1.entrySet().forEach(n-> {if(mapa2.entrySet().contains(n)) {mapa.put(n.getKey(), n.getValue());}});
+
+		for (Entry<String, Integer> n : mapa1.entrySet())
+			if (mapa2.entrySet().contains(n))
+				mapa.put(n.getKey(), n.getValue());
+		return mapa;
 	}
 
 }
