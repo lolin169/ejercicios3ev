@@ -168,4 +168,18 @@ public class Colecciones {
 		return 0;
 	}
 
+	public static Map<String, Integer> cuentaPares(List<String> lista) {
+		Map<String, Integer> mapa = new HashMap<>();
+		for (String p : lista) {
+			for (int i = 0; (i < p.length() - 1 && p.length() % 2 == 0); i++) {
+				String par = String.valueOf(p.charAt(i)) + String.valueOf(p.charAt(i + 1));
+				if (!mapa.containsKey(par))
+					mapa.put(par, 1);
+				else
+					mapa.put(par, mapa.get(par) + 1);
+			}
+		}
+		return mapa;
+	}
+
 }
