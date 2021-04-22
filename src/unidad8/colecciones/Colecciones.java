@@ -182,4 +182,28 @@ public class Colecciones {
 		return mapa;
 	}
 
+	public static int contarComunes(List<Integer> lista1, List<Integer> lista2) {
+
+//	NO FUNCIONA PORQUE SI HAY UN NÚMERO REPETIDO LO METE POR PRIMERA VEZ IGUAL	
+//		Set<Integer> set= new HashSet<>();
+//		lista1.retainAll(lista2);
+//		set.addAll(lista1);
+//		set.addAll(lista2);
+//		lista1.stream().distinct().forEach(n-> set.add(n));
+//		lista2.stream().distinct().forEach(n->set.add(n));
+
+		Map<Integer, Integer> mapa = new HashMap<>();
+		for (int num : lista1) {
+			for (int i = 0; i < lista2.size(); i++) {
+				if (num == lista2.get(i))
+					if (mapa.get(num) == null)
+						mapa.put(num, 1);
+					else
+						mapa.put(num, mapa.get(num) + 1);
+			}
+		}
+		mapa.values().removeIf(n -> n > 1);
+		return mapa.size();
+	}
+
 }
