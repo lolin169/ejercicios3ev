@@ -206,4 +206,59 @@ public class Colecciones {
 		return mapa.size();
 	}
 
+	public static Deque<Integer> duplicar(Deque<Integer> numeros) {
+		Deque<Integer> pila2 = new ArrayDeque<>();
+		System.out.println("Tope -> " + numeros);
+		while (!numeros.isEmpty()) {
+			pila2.push(numeros.peek());
+			pila2.push(numeros.pop());
+		}
+		while (!pila2.isEmpty())
+			numeros.push(pila2.pop());
+		return numeros;
+	}
+
+//	public static void main(String[] args) {
+//
+//		LinkedList<Integer> numeros = new LinkedList<>();
+//		ArrayList<Integer> numeros1 = new ArrayList<>();
+//		Deque<Integer> numeros3 = new LinkedList<>();
+////		Map<String, Integer> mapa1 = new LinkedHashMap<>();
+////		List<String> lista = new ArrayList<>();
+//
+////		mapa1.put("Juan",33);
+////		mapa1.put("Hugo",29);
+////		mapa1.put("Ana",45);
+////		mapa1.put("Luis",47);
+////		mapa1.put("Mario",33);
+////		mapa1.put("Rosa",29);
+////		mapa1.put("Carmen",33);
+////		mapa1.put("Elena",59);
+////		mapa1.put("Benito",33);
+//
+//		numeros3.push(7);
+//		numeros3.push(6);
+//		numeros3.push(2);
+//		numeros3.push(9);
+//		numeros3.push(5);
+////		numeros1.add(2);
+////		numeros1.add(12);
+////		numeros1.add(14);
+////		numeros1.add(9);
+////		numeros1.add(7);
+////		numeros1.add(17);
+////		System.out.println("Tope -> " + numeros);
+////		negativosAbajoPositivosArriba(numeros);
+////		eliminarSiMayoresEncima(numeros);
+////		System.out.println(ValorMenosRepetido(mapa1));
+////		lista.add("banana");
+////		lista.add("pera");
+////		lista.add("melón");
+////		lista.add("o");
+////		lista.add("sandía");
+////		System.out.println(cuentaPares(lista));
+////		System.out.println(contarComunes(numeros,numeros1));
+//		System.out.println(duplicar(numeros3));
+//	}
+
 }
