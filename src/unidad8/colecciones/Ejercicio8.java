@@ -26,7 +26,6 @@ public class Ejercicio8 {
 				valor += equivale(carta);
 			System.out.println(jugador.getKey() + ": " + valor);
 		}
-
 	}
 
 	static int equivale(String carta) {
