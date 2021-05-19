@@ -171,7 +171,7 @@ public class Colecciones {
 	public static Map<String, Integer> cuentaPares(List<String> lista) {
 		Map<String, Integer> mapa = new HashMap<>();
 		for (String p : lista) {
-			for (int i = 0; (i < p.length() - 1 && p.length() % 2 == 0); i++) {
+			for (int i = 0; i < p.length() - 1; i++) {
 				String par = String.valueOf(p.charAt(i)) + String.valueOf(p.charAt(i + 1));
 				if (!mapa.containsKey(par))
 					mapa.put(par, 1);
@@ -224,7 +224,7 @@ public class Colecciones {
 //		ArrayList<Integer> numeros1 = new ArrayList<>();
 //		Deque<Integer> numeros3 = new LinkedList<>();
 ////		Map<String, Integer> mapa1 = new LinkedHashMap<>();
-////		List<String> lista = new ArrayList<>();
+//		List<String> lista = new ArrayList<>();
 //
 ////		mapa1.put("Juan",33);
 ////		mapa1.put("Hugo",29);
@@ -251,12 +251,12 @@ public class Colecciones {
 ////		negativosAbajoPositivosArriba(numeros);
 ////		eliminarSiMayoresEncima(numeros);
 ////		System.out.println(ValorMenosRepetido(mapa1));
-////		lista.add("banana");
-////		lista.add("pera");
-////		lista.add("melón");
-////		lista.add("o");
-////		lista.add("sandía");
-////		System.out.println(cuentaPares(lista));
+//		lista.add("banana");
+//		lista.add("pera");
+//		lista.add("melón");
+//		lista.add("o");
+//		lista.add("sandía");
+//		System.out.println(cuentaPares(lista));
 ////		System.out.println(contarComunes(numeros,numeros1));
 //		System.out.println(duplicar(numeros3));
 //	}
