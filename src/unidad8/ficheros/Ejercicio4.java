@@ -37,7 +37,7 @@ public class Ejercicio4 {
 			System.out.println(
 					"El archivo tiene " + lineas + " lineas, " + palabras + " palabras, " + letras + " letras.");
 			DataOutputStream out = new DataOutputStream(
-					new BufferedOutputStream(new FileOutputStream("ejercicio4.bin")));
+					new BufferedOutputStream(new FileOutputStream("archivos\\ejercicio4.bin")));
 			out.writeUTF(path);
 			out.writeInt(lineas);
 			out.writeInt(palabras);
