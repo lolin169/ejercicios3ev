@@ -11,7 +11,7 @@ public class Ejercicio1 {
 			nombre = new File(args[0]);
 		else {
 			Scanner teclado = new Scanner(System.in);
-			nombre = new File("C:\\Users\\Usuario\\Desktop\\Archivos\\El Quijote ISO-8859-1.txt");
+			nombre = new File(teclado.nextLine());
 			teclado.close();
 		}
 		if (!nombre.exists())
