@@ -1,11 +1,8 @@
 package unidad8.ficheros;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -47,10 +44,6 @@ public class Ejercicio4 {
 			out.writeInt(letras);
 			out.close();
 			System.out.println("Archivo binario creado y escrito correctamente");
-			DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream("ejercicio4.bin")));
-			System.out.println(in.readUTF() + " " + in.readInt() + " lineas, " + in.readInt() + " palabras, "
-					+ in.readInt() + " letras.");
-			in.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
