@@ -1,0 +1,7 @@
+Ash Charizard fuego 100
+Brock Squirtle agua 38
+Ash Pikachu electricidad 10
+torneo
+fuego
+electricidad
+fin
