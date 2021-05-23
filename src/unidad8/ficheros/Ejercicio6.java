@@ -19,9 +19,9 @@ public class Ejercicio6 {
 		int eleccion = teclado.nextInt();
 		teclado.close();
 		if (eleccion == 1)
-			abrir("C:\\Users\\Usuario\\Desktop\\Archivos\\El Quijote UTF-8.txt");
+			abrir("archivos\\El Quijote UTF-8.txt");
 		else if (eleccion == 2)
-			abrir("C:\\Users\\Usuario\\Desktop\\Archivos\\El Quijote ISO-8859-1.txt");
+			abrir("archivos\\El Quijote ISO-8859-1.txt");
 		else
 			System.out.println("Elección errónea");
 	}
