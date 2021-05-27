@@ -27,7 +27,6 @@ public class Ejercicio5 {
 				}
 			}
 		} catch (IOException e) {
-			eof = true;
 			System.out.println("Error, el archivo no se encuentra o es erróneo");
 		}
 
