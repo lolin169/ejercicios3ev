@@ -207,15 +207,23 @@ public class Colecciones {
 	}
 
 	public static Deque<Integer> duplicar(Deque<Integer> numeros) {
-		Deque<Integer> pila2 = new ArrayDeque<>();
-		System.out.println("Tope -> " + numeros);
-		while (!numeros.isEmpty()) {
-			pila2.push(numeros.peek());
-			pila2.push(numeros.pop());
+//		Deque<Integer> pila2 = new ArrayDeque<>();
+//		System.out.println("Tope -> " + numeros);
+//		while (!numeros.isEmpty()) {
+//			pila2.push(numeros.peek());
+//			pila2.push(numeros.pop());
+//		}
+//		while (!pila2.isEmpty())
+//			numeros.push(pila2.pop());
+//		return numeros;
+		
+		Queue <Integer> aux= new LinkedList<>();
+		while(!numeros.isEmpty()) {
+			aux.offer(numeros.peek());
+			aux.offer(numeros.pop());	
 		}
-		while (!pila2.isEmpty())
-			numeros.push(pila2.pop());
-		return numeros;
+		
+		return (Deque<Integer>) aux;
 	}
 
 //	public static void main(String[] args) {
